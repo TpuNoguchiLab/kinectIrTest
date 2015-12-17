@@ -1,0 +1,38 @@
+﻿2015/12/18 2:50:35 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectIrTest\kinectIrTest.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\¥inc" /I..\..\..\libs\openFrameworks /I..\..\..\libs\openFrameworks\graphics /I..\..\..\libs\openFrameworks\app /I..\..\..\libs\openFrameworks\sound /I..\..\..\libs\openFrameworks\utils /I..\..\..\libs\openFrameworks\communication /I..\..\..\libs\openFrameworks\video /I..\..\..\libs\openFrameworks\types /I..\..\..\libs\openFrameworks\math /I..\..\..\libs\openFrameworks\3d /I..\..\..\libs\openFrameworks\gl /I..\..\..\libs\openFrameworks\events /I..\..\..\libs\glut\include /I..\..\..\libs\rtAudio\include /I..\..\..\libs\quicktime\include /I..\..\..\libs\freetype\include /I..\..\..\libs\freetype\include\freetype2 /I..\..\..\libs\freeImage\include /I..\..\..\libs\fmodex\include /I..\..\..\libs\videoInput\include /I..\..\..\libs\glew\include\ /I..\..\..\libs\glu\include /I..\..\..\libs\tess2\include /I..\..\..\libs\cairo\include\cairo /I..\..\..\libs\poco\include /I..\..\..\libs\glfw\include /I..\..\..\libs\openssl\include /I..\..\..\addons /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D POCO_STATIC /D CAIRO_WIN32_STATIC_BUILD /D DISABLE_SOME_FLOATING_POINT /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"obj\Debug\\" /Fd"obj\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt src\ofApp.cpp
+         ofApp.cpp
+     1>c:\users\staff\desktop\of_v0.8.4_vs_release\libs\poco\include\poco\streamconverter.h(126): warning C4250: 'Poco::InputStreamConverter' : 2 つ以上のメンバーが同じ名前を持っています。'std::basic_istream<_Elem,_Traits>::std::basic_istream<_Elem,_Traits>::_Add_vtordisp1' から継承します。
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\istream(74) : 'std::basic_istream<_Elem,_Traits>::_Add_vtordisp1' の宣言を確認してください。
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+     1>c:\users\staff\desktop\of_v0.8.4_vs_release\libs\poco\include\poco\streamconverter.h(144): warning C4250: 'Poco::OutputStreamConverter' : 2 つ以上のメンバーが同じ名前を持っています。'std::basic_ostream<_Elem,_Traits>::std::basic_ostream<_Elem,_Traits>::_Add_vtordisp2' から継承します。
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(90) : 'std::basic_ostream<_Elem,_Traits>::_Add_vtordisp2' の宣言を確認してください。
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectirtest\src\ofapp.cpp(10): error C2065: 'irImage' : 定義されていない識別子です。
+     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectirtest\src\ofapp.cpp(10): error C2228: '.allocate' の左側はクラス、構造体、共用体でなければなりません
+                 型は ''unknown-type'' です。
+     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectirtest\src\ofapp.cpp(19): error C2660: 'IInfraredFrame::CopyFrameDataToArray' : 関数に 1 個の引数を指定できません。
+     1>プロジェクト "C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectIrTest\kinectIrTest.vcxproj" (Build ターゲット) のビルドが終了しました -- 失敗。
+
+ビルドに失敗しました。
+
+経過時間 00:00:03.10
