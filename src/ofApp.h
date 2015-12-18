@@ -31,7 +31,7 @@ class ofApp : public ofBaseApp{
 		
 		bool initKinect();
 
-		ofImage irimage;
+		ofShortImage irImage;
 
 		IKinectSensor *sensor;
 
@@ -41,5 +41,6 @@ class ofApp : public ofBaseApp{
 		int irWidth,irHeight;
 		unsigned int irBytesPerPixels;
 
+		vector<UINT16>infraredBuffer;
 
 };

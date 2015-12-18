@@ -1,5 +1,5 @@
-﻿2015/12/18 2:50:35 にビルドを開始しました。
-     1>ノード 2 上のプロジェクト "C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectIrTest\kinectIrTest.vcxproj" (Build ターゲット)。
+﻿2015/12/18 19:56:10 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectirtest\kinectIrTest.vcxproj" (Build ターゲット)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\¥inc" /I..\..\..\libs\openFrameworks /I..\..\..\libs\openFrameworks\graphics /I..\..\..\libs\openFrameworks\app /I..\..\..\libs\openFrameworks\sound /I..\..\..\libs\openFrameworks\utils /I..\..\..\libs\openFrameworks\communication /I..\..\..\libs\openFrameworks\video /I..\..\..\libs\openFrameworks\types /I..\..\..\libs\openFrameworks\math /I..\..\..\libs\openFrameworks\3d /I..\..\..\libs\openFrameworks\gl /I..\..\..\libs\openFrameworks\events /I..\..\..\libs\glut\include /I..\..\..\libs\rtAudio\include /I..\..\..\libs\quicktime\include /I..\..\..\libs\freetype\include /I..\..\..\libs\freetype\include\freetype2 /I..\..\..\libs\freeImage\include /I..\..\..\libs\fmodex\include /I..\..\..\libs\videoInput\include /I..\..\..\libs\glew\include\ /I..\..\..\libs\glu\include /I..\..\..\libs\tess2\include /I..\..\..\libs\cairo\include\cairo /I..\..\..\libs\poco\include /I..\..\..\libs\glfw\include /I..\..\..\libs\openssl\include /I..\..\..\addons /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D POCO_STATIC /D CAIRO_WIN32_STATIC_BUILD /D DISABLE_SOME_FLOATING_POINT /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"obj\Debug\\" /Fd"obj\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt src\ofApp.cpp
          ofApp.cpp
@@ -27,12 +27,27 @@
                      _Elem=char,
                      _Traits=std::char_traits<char>
                  ]
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectirtest\src\ofapp.cpp(10): error C2065: 'irImage' : 定義されていない識別子です。
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectirtest\src\ofapp.cpp(10): error C2228: '.allocate' の左側はクラス、構造体、共用体でなければなりません
-                 型は ''unknown-type'' です。
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectirtest\src\ofapp.cpp(19): error C2660: 'IInfraredFrame::CopyFrameDataToArray' : 関数に 1 個の引数を指定できません。
-     1>プロジェクト "C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectIrTest\kinectIrTest.vcxproj" (Build ターゲット) のビルドが終了しました -- 失敗。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"bin\kinectIrTest_debug.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\¥lib¥x86" /LIBPATH:..\..\..\libs\glut\lib\vs /LIBPATH:..\..\..\libs\glfw\lib\vs /LIBPATH:..\..\..\libs\rtAudio\lib\vs /LIBPATH:..\..\..\libs\FreeImage\lib\vs /LIBPATH:..\..\..\libs\freetype\lib\vs /LIBPATH:..\..\..\libs\quicktime\lib\vs /LIBPATH:..\..\..\libs\fmodex\lib\vs /LIBPATH:..\..\..\libs\videoInput\lib\vs /LIBPATH:..\..\..\libs\cairo\lib\vs /LIBPATH:..\..\..\libs\glew\lib\vs /LIBPATH:..\..\..\libs\glu\lib\vs /LIBPATH:..\..\..\libs\openssl\lib\vs /LIBPATH:..\..\..\libs\Poco\lib\vs /LIBPATH:..\..\..\libs\tess2\lib\vs Kinect20.lib "cairo-static.lib" "pixman-1.lib" msimg32.lib OpenGL32.lib GLu32.lib kernel32.lib setupapi.lib Vfw32.lib comctl32.lib glut32.lib rtAudioD.lib videoInputD.lib libfreetype.lib FreeImage.lib qtmlClient.lib dsound.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib glew32s.lib fmodex_vc.lib glu32.lib ssleay32MD.lib libeay32MD.lib crypt32.lib PocoFoundationmdd.lib PocoNetmdd.lib PocoUtilmdd.lib PocoXMLmdd.lib Ws2_32.lib tess2.lib glfw3.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:PocoFoundationmdd.lib /NODEFAULTLIB:atlthunk.lib /NODEFAULTLIB:msvcrt /NODEFAULTLIB:libcmt /NODEFAULTLIB:LIBC /NODEFAULTLIB:LIBCMTD /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"bin\kinectIrTest_debug.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /NXCOMPAT /IMPLIB:"bin\kinectIrTest_debug.lib" /MACHINE:X86 /SAFESEH obj\Debug\icon.res
+         obj\Debug\main.obj
+         obj\Debug\ofApp.obj
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\libs\openFrameworksCompiled\lib\vs\openframeworksLib_debug.lib
+         kinectIrTest.vcxproj -> C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectirtest\bin\kinectIrTest_debug.exe
+       PostBuildEvent:
+         xcopy /e /i /y "C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectirtest\..\..\..\export\vs\*.dll" "C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectirtest\bin"
+         :VCEnd
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectirtest\..\..\..\export\vs\Assimp32.dll
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectirtest\..\..\..\export\vs\fmodex.dll
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectirtest\..\..\..\export\vs\fmodexL.dll
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectirtest\..\..\..\export\vs\FreeImage.dll
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectirtest\..\..\..\export\vs\FreeType-6.dll
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectirtest\..\..\..\export\vs\glut32.dll
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectirtest\..\..\..\export\vs\libeay32.dll
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectirtest\..\..\..\export\vs\ssleay32.dll
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectirtest\..\..\..\export\vs\Zlib.dll
+         9 個のファイルをコピーしました
+     1>プロジェクト "C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectirtest\kinectIrTest.vcxproj" (Build ターゲット) のビルドが完了しました。
 
-ビルドに失敗しました。
+ビルドに成功しました。
 
-経過時間 00:00:03.10
+経過時間 00:00:04.39

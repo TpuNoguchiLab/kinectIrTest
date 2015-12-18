@@ -2,31 +2,39 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	ofSetWindowShape(1920, 1080);
+	ofSetWindowShape(512, 424);
 	ofSetFrameRate(30);
 
 	if (!initKinect()) exit();
-
-	irImage.allocate(512, 424, OF_IMAGE_GRAYSCALE);
+	infraredBuffer.resize(irWidth*irHeight);
+	irImage.allocate(irWidth, irHeight, OF_IMAGE_GRAYSCALE);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 	IInfraredFrame *infraredFrame = nullptr;
 	HRESULT hResult = infraredReader -> AcquireLatestFrame(&infraredFrame);
-
+	//if (infraredBuffer.size() != 0) infraredBuffer.clear();
 	if (SUCCEEDED(hResult)) {
-		//hResult = infraredFrame ->CopyFrameDataToArray(irWidth*irHeight*irBytesPerPixels, irimage.getPixels(),ColorImageFormat_Rgba);
+		hResult = infraredFrame ->CopyFrameDataToArray(infraredBuffer.size(),&infraredBuffer[0]);
+
+		for (int i = 0; i < infraredBuffer.size(); i++){
+			irImage.getPixels()[i] = infraredBuffer[i];
+		}
+		irImage.update();
+
 	}
+
+	SafeRelease(infraredFrame);
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
+	irImage.draw(0,0,irWidth,irHeight);
 }
 
 bool ofApp::initKinect() {
-	//senspr
+	//sensor
 	HRESULT hResult = S_OK;
 	hResult = GetDefaultKinectSensor(&sensor);
 	if (FAILED(hResult)) {
@@ -51,12 +59,6 @@ bool ofApp::initKinect() {
 		std::cerr << "Error : OpenReader" << std::endl;
 		return -1;
 	}
-	hResult = infraredSource->OpenReader(&infraredReader);
-	if (FAILED(hResult)){
-		std::cerr << "Error : OpenReader" << std::endl;
-		return -1;
-	}
-
 	hResult = infraredSource->get_FrameDescription(&infraredDescription);
 	if (FAILED(hResult)){
 		std::cerr << "Error : IColorFrameSource::get_FrameDescription()" << std::endl;
